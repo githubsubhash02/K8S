@@ -4,7 +4,7 @@ metadata:
   name: web-app
 
 ---
-# ✅ Persistent Volume for MySQL
+# Persistent Volume for MySQL
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -18,7 +18,7 @@ spec:
       storage: 5Gi
 
 ---
-# ✅ MySQL Deployment
+# MySQL Deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -57,7 +57,7 @@ spec:
           claimName: mysql-pvc
 
 ---
-# ✅ MySQL Service (Internal Only)
+# MySQL Service (Internal Only)
 apiVersion: v1
 kind: Service
 metadata:
@@ -73,7 +73,7 @@ spec:
   clusterIP: None  # Headless service for direct pod access
 
 ---
-# ✅ Apache Tomcat Deployment
+# Apache Tomcat Deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -103,7 +103,7 @@ spec:
           value: "password"
 
 ---
-# ✅ Tomcat Service (Internal & External)
+# Tomcat Service (Internal & External)
 apiVersion: v1
 kind: Service
 metadata:
