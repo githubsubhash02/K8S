@@ -8,6 +8,22 @@ kind: Namespace
 metadata:
   name: web-app
 
+
+
+---
+kind: PersistentVolume
+metadata:
+  name: mysql-pv
+spec:
+  capacity:
+    storage: 6Gi  # Must match the PVC request
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "/mnt/data/mysql"  # Change this if using cloud storage
+
+
 ---
 # Persistent Volume for MySQL
 apiVersion: v1
