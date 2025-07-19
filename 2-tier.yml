@@ -11,7 +11,7 @@ metadata:
   name: mysql-pv
 spec:
   capacity:
-    storage: 6Gi  # Must match the PVC request
+    storage: 6Gi 
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
